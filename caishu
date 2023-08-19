@@ -1,0 +1,20 @@
+"""
+猜数游戏
+"""
+
+import random
+
+answer = random.randint(1, 100)
+counter = 0
+while True:
+    counter += 1
+    number = int(input('猜一个数字（1-100）: '))
+    if number < answer:
+        print('再大一点')
+    elif number > answer:
+        print('再小一点')
+    else:
+        print('猜对了')
+        break
+
+print(f'共猜了{counter}次')
